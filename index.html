@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Motivational Countdown & Productivity App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- LEFT SIDE: timer, todo, reminder -->
+    <div class="container">
+  <h1>Done is better than perfect!</h1>
+
+      <!-- Countdown Inputs -->
+      <div class="inputs" role="group" aria-label="Countdown inputs">
+        <div class="input-box">
+             <label for="days">Days</label>
+          <input id="days" type="number" min="0" value="0" />
+        </div>
+        <div class="input-box">
+          <label for="hours">Hours</label>
+          <input id="hours" type="number" min="0" max="23" value="0" />
+        </div>
+        <div class="input-box">
+          <label for="minutes">Minutes</label>
+          <input id="minutes" type="number" min="0" max="59" value="0" />
+        </div>
+        <div class="input-box">
+          <label for="seconds">Seconds</label>
+          <input id="seconds" type="number" min="0" max="59" value="0" />
+        </div>
+      </div>
+
+      <!-- Timer Buttons -->
+      <div class="buttons" role="toolbar" aria-label="Timer controls">
+        <button id="startBtn" type="button">Start</button>
+        <button id="pauseBtn" type="button">Pause</button>
+        <button id="resetBtn" type="button">Reset</button>
+      </div>
+
+      <!-- Timer Display -->
+      <div class="countdown" id="countdownDisplay" aria-live="polite">00:00:00:00</div>
+
+      <!-- To-Do List -->
+      <div class="todo">
+        <h3>To-Do List</h3>
+        <div class="todo-controls">
+          <input id="todoInput" type="text" placeholder="Add a task" />
+          <button id="addTodoBtn" type="button">Add</button>
+        </div>
+        <ul id="todoList" aria-label="To-do list"></ul>
+      </div>
+
+      <!-- Reminders -->
+      <div class="reminder">
+        <h3>Reminders</h3>
+        <input id="reminderText" type="text" placeholder="Reminder text" />
+        <input id="reminderTime" type="datetime-local" />
+        <button id="addReminderBtn" type="button">Set Reminder</button>
+        <ul id="reminderList" aria-label="Reminders"></ul>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: hourglass image -->
+    <div class="side-image">
+  <img src="hourglass.png" />
+</div>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
